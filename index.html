@@ -3,10 +3,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mail Me</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="asset/css/index.css" type="text/css">
     <script src="asset/js/index.js"></script>
 </head>
 <body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg_lightgrey">
+            <h1 class="navbar-brand percent75 txtAlignCenter fontXL" href="#"><b>MAQUETTE INTERFACE MAILING</b></h1>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form>
+            </div>
+          </nav>
+    </header>
+    <section>
+          <form action="" class="fx col jccenter marginTop1 marginLeft5 percent50 hpercent85 bg_lightgrey">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">e-mail</span>
+                </div>
+                <input type="text" class="form-control" placeholder="entrer une adresse mail" aria-label="Username" aria-describedby="basic-addon1">
+              </div>
     
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <button type="button" class="btn btn-outline-secondary">Objet</button>
+                  <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="sr-only">Toggle Dropdown</span>
+                  </button>
+                  <div class="dropdown-menu">
+                    <a id="tik1" class="dropdown-item" href="#">Ticket1</a>
+                    <a id="tik2" class="dropdown-item" href="#">Ticket2</a>
+                    <a id="tik3" class="dropdown-item" href="#">Ticket3</a>
+                    <a id="tik4" class="dropdown-item" href="#">Ticket4</a>
+                    <a id="tik5" class="dropdown-item" href="#">Ticket5</a>
+                    <a id="tik6" class="dropdown-item" href="#">Ticket6</a>
+                  </div>
+                </div>
+                <input type="text" class="form-control" aria-label="Text input with segmented dropdown button" placeholder="entrer un objet">
+              </div>
+              
+              <div class="input-group hpercent60 percent100 marginBottom1 bg_white">
+                <iframe id="ticket1" src="asset/html/ticket1.html" frameborder="0" class="mail absolute percent100 hpercent100"></iframe>
+                <iframe id="ticket2" src="asset/html/ticket2.html" frameborder="0" class="mail absolute percent100 hpercent100"></iframe>
+                <iframe id="ticket3" src="asset/html/ticket3.html" frameborder="0" class="mail absolute percent100 hpercent100"></iframe>
+                <iframe id="ticket4" src="asset/html/ticket4.html" frameborder="0" class="mail absolute percent100 hpercent100"></iframe>
+                <iframe id="ticket5" src="asset/html/ticket5.html" frameborder="0" class="mail absolute percent100 hpercent100"></iframe>
+                <iframe id="ticket6" src="asset/html/ticket6.html" frameborder="0" class="mail absolute percent100 hpercent100"></iframe>
+              </div>
+              <div class="custom-file marginBottom1">
+                <input type="file" class="custom-file-input" id="customFile">
+                <label class="custom-file-label" for="customFile">Joindre un document</label>
+              </div>
+              <button type="submit" class="btn btn-outline-success btn-lg btn-block">Envoyer</button>
+          </form>
+          <form id="register" class="fx col jccenter percent40 hpercent40 absolute bg_lightgrey">
+            <div class="form-col">
+                <div>
+                    <h3>Nouveau Contact</h3>
+                </div>
+                <div>
+                  <label for="validationCustom01">Nom ou Dénomination Sociale</label>
+                  <input type="text" class="form-control" id="validationCustom01" placeholder="facebook" required>
+                  <div class="valid-feedback">
+                    Excellent!
+                  </div>
+                </div>
+                <div>
+                  <label for="validationCustomUsername">Adresse mail</label>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="inputGroupPrepend">@</span>
+                    </div>
+                    <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                    <div class="invalid-feedback">
+                      Entrer une adresse mail.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <button class="btn btn-outline-primary marginTop1" type="submit">Enregistrer</button>
+          </form>
+    </section>
+    <footer>
+
+    </footer>
 </body>
 </html>
