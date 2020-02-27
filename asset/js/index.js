@@ -11,78 +11,20 @@ document.addEventListener("DOMContentLoaded", function(event){
         return document.getElementById(n)
     }
 
-    const tik1 = byId("tik1")
-    const tik2 = byId("tik2")
-    const tik3 = byId("tik3")
-    const tik4 = byId("tik4")
-    const tik5 = byId("tik5")
-    const tik6 = byId("tik6")
+    function switchTicket(a,b){
+        let item = byId(a)
+        let ticket = byId("blankTicket")
+        item.addEventListener("click", function(){
+            ticket.src = b
+        })
+    }
 
-    const ticket1 = byId("ticket1")
-    const ticket2 = byId("ticket2")
-    const ticket3 = byId("ticket3")
-    const ticket4 = byId("ticket4")
-    const ticket5 = byId("ticket5")
-    const ticket6 = byId("ticket6")
-
-    tik1.addEventListener("click", function(){
-        let item = byId("ticket1")
-        item.style.display = "flex"
-        ticket2.style.display = "none"
-        ticket3.style.display = "none"
-        ticket4.style.display = "none"
-        ticket5.style.display = "none"
-        ticket6.style.display = "none"
-    })
-
-    tik2.addEventListener("click", function(){
-        let item = byId("ticket2")
-        item.style.display = "flex"
-        ticket1.style.display = "none"
-        ticket3.style.display = "none"
-        ticket4.style.display = "none"
-        ticket5.style.display = "none"
-        ticket6.style.display = "none"
-    })
-
-    tik3.addEventListener("click", function(){
-        let item = byId("ticket3")
-        item.style.display = "flex"
-        ticket1.style.display = "none"
-        ticket2.style.display = "none"
-        ticket4.style.display = "none"
-        ticket5.style.display = "none"
-        ticket6.style.display = "none"
-    })
-
-    tik4.addEventListener("click", function(){
-        let item = byId("ticket4")
-        item.style.display = "flex"
-        ticket1.style.display = "none"
-        ticket2.style.display = "none"
-        ticket3.style.display = "none"
-        ticket5.style.display = "none"
-        ticket6.style.display = "none"
-    })
-
-    tik5.addEventListener("click", function(){
-        let item = byId("ticket5")
-        item.style.display = "flex"
-        ticket1.style.display = "none"
-        ticket2.style.display = "none"
-        ticket3.style.display = "none"
-        ticket4.style.display = "none"
-        ticket6.style.display = "none"
-    })
-
-    tik6.addEventListener("click", function(){
-        let item = byId("ticket6")
-        item.style.display = "flex"
-        ticket1.style.display = "none"
-        ticket2.style.display = "none"
-        ticket3.style.display = "none"
-        ticket4.style.display = "none"
-        ticket5.style.display = "none"
-    })
+    switchTicket("tik1", "asset/html/ticket1.html")
+    switchTicket("tik2", "asset/html/ticket2.html")
+    switchTicket("tik3", "asset/html/ticket3.html")
+    switchTicket("tik4", "asset/html/ticket4.html")
+    switchTicket("tik5", "asset/html/ticket5.html")
+    switchTicket("tik6", "asset/html/ticket6.html")
+    switchTicket("tik0", "asset/html/blank.html")
 
 })
